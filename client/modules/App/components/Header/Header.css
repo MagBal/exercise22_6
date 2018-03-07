@@ -7,9 +7,10 @@
 .content {
   width: 100%;
   max-width: 980px;
-  margin: auto;
+  margin: 0 auto;
   padding: 64px 16px;
   overflow: auto;
+  text-align: center;
 }
 
 .site-title {
@@ -36,18 +37,22 @@
 .language-switcher {
   background: rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 980px;
+  /*max-width: 980px;*/
+  height: 50px;
   margin: auto;
 }
 
-.language-switcher ul {
+.navigation {
+  float: left;
+}
+
+.lang ul {
   list-style: none;
-  width: 980px;
   margin: auto;
-  text-align: right;
+  float: right;
 }
 
-.language-switcher li {
+.lang li {
   display: inline-block;
   margin: 10px;
   padding: 5px;
@@ -55,8 +60,12 @@
   color: #fff;
 }
 
-.language-switcher li:first-child {
+.lang li:first-child {
   color: rgba(255, 255, 255, 0.7);
+}
+
+.lang li:last-of-type {
+  margin-right: 10px;
 }
 
 .selected {
@@ -68,4 +77,21 @@
     float: left;
     margin-top: 16px;
   }
+  .language-switcher {
+    height: 200px;
+    margin: 0;
+  }
+  .navigation {
+    float: none;
+  }
+  .lang ul {
+    float: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .lang li:last-of-type {
+    margin-right: 0;
+  }
+  
 }
